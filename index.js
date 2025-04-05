@@ -56,7 +56,7 @@ document.getElementById("save").addEventListener("click", () => {
         o.chance = Number(o.chance.value) || 0;
     });
 
-    game.options.title = document.getElementById("title").value;
+    game.title = document.getElementById("title").value;
 
     window.location = `/play?data=${btoa(JSON.stringify(game))}`;
 });
