@@ -4,7 +4,8 @@ const p = new URLSearchParams(window.location.search || "?");
 let game = {
     options: [],
     version: 1,
-    title: ""
+    title: "",
+    id: crypto.randomUUID()
 };
 let optionIndex = 0; // dont want interference!
 
