@@ -57,7 +57,7 @@ document.getElementById("save").addEventListener("click", () => {
     });
 
     game.title = document.getElementById("title").value;
-    if (!game.id) game.id = crypto.randomUUID();
+    if (!game.id || game.id == "") game.id = crypto.randomUUID();
 
     window.location = `/play?data=${btoa(JSON.stringify(game))}`;
 });
