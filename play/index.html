@@ -1,32 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-        <link href="../index.css" rel="stylesheet">
-        <link rel="icon" href="../assets/die.svg" type="image/x-svg">
-        <title>Play | RNG Maker</title>
-    </head>
-    <body data-bs-theme="dark">
-        <div class="bg"></div>
 
-        <main class="d-flex align-items-center justify-content-center w-100 h-100 flex-column text-white">
-            <h1 id="title">Title</h1>
-            <div class="card mb-3 text-center" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 id="name" class="card-title">Welcome!</h5>
-                    <p id="description" class="card-text">Click the button below to start rolling<p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link href="../index.css" rel="stylesheet">
+    <link rel="icon" href="../assets/die.svg" type="image/x-svg">
+    <title>Play | RNG Maker</title>
+</head>
+
+<body data-bs-theme="dark">
+    <div class="bg"></div>
+
+    <main class="d-flex align-items-center justify-content-center w-100 h-100 flex-column text-white">
+        <h1 id="title">Title</h1>
+        <div class="card mb-3 text-center" style="width: 18rem;">
+            <div class="card-body">
+                <h5 id="name" class="card-title">Welcome!</h5>
+                <p id="description" class="card-text">Click the button below to start rolling
+                <p>
+            </div>
+        </div>
+        <div>
+            <button class="btn btn-success me-1" id="roll">Roll</button>
+            <button class="btn btn-warning me-1" id="collection" data-bs-toggle="modal"
+                data-bs-target="#collectionModal">Collection</button>
+            <button class="btn btn-secondary me-2" id="share">Share</a>
+                <button class="btn btn-secondary" id="edit">Edit</a>
+        </div>
+    </main>
+
+    <div class="modal fade" id="collectionModal" tabindex="-1" aria-labelledby="collectionModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="collectionModalLabel">Collection for [title]</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="no-collection">You haven't collected anything yet :(</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" id="clear-collection">Clear collection</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
-            <div>
-                <button class="btn btn-success me-1" id="roll">Roll</button>
-                <button class="btn btn-secondary me-2" id="share">Share</a>
-                <button class="btn btn-secondary" id="edit">Edit</a>
-            </div>
-        </main>
-    </body>
+        </div>
+    </div>
+</body>
+
 </html>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
 <script src="./index.js"></script>
